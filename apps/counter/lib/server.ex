@@ -1,14 +1,13 @@
-defmodule Counter.Commander.Server do
+defmodule Counter.Server do
   use GenServer
 
-  alias Examples.Counter
-  alias Examples.Counter.Commands.{
+  alias Counter.Commands.{
       IncrementCount
   }
   # Client
-  def start_link do
+  def start_link(name) do
     IO.puts "Server start requested"
-    GenServer.start_link(__MODULE__, :ok, Counter.Commander.Server)
+    GenServer.start_link(__MODULE__, :ok, name: name)
   end
 
   def get_count(server) do
@@ -22,7 +21,7 @@ defmodule Counter.Commander.Server do
   # Server
   def init(:ok) do
     IO.puts "Server init"
-    counter = %Counter{count: 0}
+    counter = %Counter{count: 0, timestamp: DateTime.utc_now}
     {:ok, counter}
   end
 

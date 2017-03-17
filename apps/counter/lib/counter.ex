@@ -1,11 +1,11 @@
-  defmodule Examples.Counter do
+  defmodule Counter do
     defstruct [
       :count,
       :timestamp
     ]
 
-    alias Examples.Counter
-    alias Examples.Counter.Events.{
+    alias Counter
+    alias Counter.Events.{
         CountIncremented
     }
 

@@ -1,4 +1,4 @@
-defmodule Examples.Counter.Mixfile do
+defmodule Counter.Mixfile do
   use Mix.Project
 
   def project do
@@ -19,7 +19,8 @@ defmodule Examples.Counter.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
-    [extra_applications: [:logger]]
+    [extra_applications: [:logger],
+     mod: {Counter.Application, []}]
   end
 
   # Dependencies can be Hex packages:

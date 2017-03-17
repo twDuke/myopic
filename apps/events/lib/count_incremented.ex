@@ -1,6 +1,6 @@
-defmodule Examples.Counter.Events.CountIncremented do
+defmodule Counter.Events.CountIncremented do
     defstruct [
       :count,
-      :timestamp      
+      :timestamp
     ]
 end

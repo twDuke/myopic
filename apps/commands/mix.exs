@@ -1,4 +1,4 @@
-defmodule Examples.Counter.Commands.Mixfile do
+defmodule Counter.Commands.Mixfile do
   use Mix.Project
 
   def project do

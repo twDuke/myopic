@@ -1,6 +1,6 @@
-defmodule Examples.Counter.Commands.IncrementCount do
+defmodule Counter.Commands.IncrementCount do
     defstruct [
       :count,
-      :timestamp      
+      :timestamp
     ]
 end
